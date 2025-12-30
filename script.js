@@ -58,6 +58,45 @@ document.addEventListener('DOMContentLoaded', () => {
         renderStudents(e.target.value);
     });
 
+    // Theme Switcher Logic
+    const themeBtns = document.querySelectorAll('.theme-btn');
+
+    // Load Saved Theme
+    const savedTheme = localStorage.getItem('nh-mtal-theme') || 'cyber';
+    setTheme(savedTheme);
+
+    themeBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const theme = btn.getAttribute('data-theme');
+            setTheme(theme);
+        });
+    });
+
+    function setTheme(theme) {
+        // Remove all themes
+        document.body.classList.remove('theme-emerald', 'theme-sunset', 'theme-midnight', 'theme-royal');
+
+        // Remove active class from buttons
+        themeBtns.forEach(b => b.classList.remove('active'));
+
+        // Add selected theme
+        if (theme !== 'cyber') {
+            document.body.classList.add(`theme-${theme}`);
+        }
+
+        // Set active button
+        const activeBtn = document.querySelector(`.theme-btn[data-theme="${theme}"]`);
+        if (activeBtn) activeBtn.classList.add('active');
+
+        // Save preference
+        localStorage.setItem('nh-mtal-theme', theme);
+
+        // Update star colors based on theme
+        const stars = document.querySelectorAll('.stars div');
+        const starColor = theme === 'emerald' ? '#10b981' : (theme === 'sunset' ? '#f97316' : '#fff');
+        stars.forEach(s => s.style.background = starColor);
+    }
+
     // Add some cool star background elements
     const starsContainer = document.querySelector('.stars');
     for (let i = 0; i < 50; i++) {

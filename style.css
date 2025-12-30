@@ -10,6 +10,93 @@
     --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Themes */
+body.theme-emerald {
+    --bg: #03150d;
+    --primary: #10b981;
+    --secondary: #34d399;
+    --accent: #a7f3d0;
+    --glass: rgba(6, 78, 59, 0.8);
+}
+
+body.theme-sunset {
+    --bg: #110c1d;
+    --primary: #f97316;
+    --secondary: #f59e0b;
+    --accent: #fbbf24;
+    --glass: rgba(67, 20, 7, 0.8);
+}
+
+body.theme-midnight {
+    --bg: #000000;
+    --primary: #6366f1;
+    --secondary: #ffffff;
+    --accent: #f8fafc;
+    --glass: rgba(15, 23, 42, 0.9);
+}
+
+body.theme-royal {
+    --bg: #1a0505;
+    --primary: #d4af37;
+    --secondary: #c0c0c0;
+    --accent: #ffd700;
+    --glass: rgba(69, 10, 10, 0.8);
+}
+
+/* Theme Switcher Styles */
+.theme-switcher {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.75rem;
+    background: var(--glass);
+    padding: 0.75rem;
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.theme-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.theme-btn:hover {
+    transform: scale(1.2);
+}
+
+.theme-btn.active {
+    border-color: white;
+    box-shadow: 0 0 15px white;
+}
+
+.theme-cyber {
+    background: linear-gradient(135deg, #00d2ff, #9d50bb);
+}
+
+.theme-emerald {
+    background: linear-gradient(135deg, #10b981, #34d399);
+}
+
+.theme-sunset {
+    background: linear-gradient(135deg, #f97316, #f59e0b);
+}
+
+.theme-midnight {
+    background: linear-gradient(135deg, #6366f1, #ffffff);
+}
+
+.theme-royal {
+    background: linear-gradient(135deg, #d4af37, #c0c0c0);
+}
+
 * {
     margin: 0;
     padding: 0;
