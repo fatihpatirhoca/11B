@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NH MTAL 11-BT Proje Portfolyo Merkezi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <i class="fas fa-microchip"></i>
+                <div class="logo-text">
+                    <h1>NH MTAL</h1>
+                    <span>11. Sınıf Bilişim Teknolojileri</span>
+                </div>
+            </div>
+            <nav>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="studentSearch" placeholder="Öğrenci ara...">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Management Section -->
+        <section class="management-section">
+            <h2 class="section-title">Bilişim Teknolojileri Alan Yönetimi</h2>
+            <div class="management-grid">
+                <!-- Alan Şefi -->
+                <div class="management-card alan-sefi">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="profile-icon"><i class="fas fa-user-tie"></i></div>
+                        <div class="info">
+                            <h3>Fatih Patır</h3>
+                            <span class="title">Alan Şefi</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Atölye Şefi 1 -->
+                <div class="management-card atolye-sefi">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="profile-icon"><i class="fas fa-user-cog"></i></div>
+                        <div class="info">
+                            <h3>Orhan AKAR</h3>
+                            <span class="title">Atölye Şefi</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Atölye Şefi 2 -->
+                <div class="management-card atolye-sefi">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="profile-icon"><i class="fas fa-user-cog"></i></div>
+                        <div class="info">
+                            <h3>Murat ASLI</h3>
+                            <span class="title">Atölye Şefi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Students Section -->
+        <section class="students-section">
+            <div class="section-header">
+                <h2 class="section-title">Öğrenci Proje Portfolyoları</h2>
+                <div class="student-count">Toplam: <span id="count">16</span> Öğrenci</div>
+            </div>
+
+            <div class="student-grid" id="studentGrid">
+                <!-- Student Cards will be generated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 – Korkuteli Nene Hatun MTAL Bilişim Teknolojileri Alanı</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

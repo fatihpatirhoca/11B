@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Adı | Öğrenci İsmi | NH MTAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .project-hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(0, 210, 255, 0.1), transparent);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
+
+        .project-details {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            padding: 4rem 0;
+        }
+
+        .project-main-image {
+            width: 100%;
+            height: 500px;
+            background: var(--card-bg);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.1);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-info-box {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item label {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--secondary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-item p {
+            font-weight: 600;
+            color: white;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            padding: 0.4rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary);
+        }
+
+        .demo-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+
+        .demo-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+        }
+
+        @media (max-width: 991px) {
+            .project-details {
+                grid-template-columns: 1fr;
+            }
+
+            .project-info-box {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars"></div>
+
+    <header>
+        <div class="container">
+            <div class="logo-area">
+                <i class="fas fa-microchip"></i>
+                <div class="logo-text">
+                    <h1>NH MTAL</h1>
+                    <span>11. Sınıf Bilişim Teknolojileri</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="project-hero">
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Hub'a Geri Dön</a>
+            <h1 class="section-title">Akıllı Ev Otomasyonu</h1>
+            <p style="color: var(--secondary); font-size: 1.2rem; font-weight: 500;">Nesne Tabanlı Programlama Final
+                Projesi</p>
+        </section>
+
+        <section class="project-details">
+            <div class="project-content">
+                <div class="project-main-image">
+                    <i class="fas fa-image"></i>
+                    <!-- Gerçek görsel gelince bura değişecek -->
+                </div>
+
+                <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Proje Hakkında</h2>
+                <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.7); line-height: 1.8; margin-bottom: 2rem;">
+                    Bu proje, kullanıcıların evlerindeki elektronik cihazları uzaktan kontrol edebilmelerini sağlayan
+                    modern bir arayüz ve kontrol mekanizması sunar. C# ve .NET mimarisi kullanılarak geliştirilen
+                    projede, nesne tabanlı programlama prensipleri (encapsulation, polymorphism) aktif olarak
+                    kullanılmıştır.
+                </p>
+
+                <h2 style="margin-bottom: 1.5rem; color: var(--primary);">Öne Çıkan Özellikler</h2>
+                <ul style="list-style: none; color: rgba(255, 255, 255, 0.7);">
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                            style="color: var(--secondary); margin-right: 0.5rem;"></i> Gerçek zamanlı cihaz durum
+                        takibi</li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                            style="color: var(--secondary); margin-right: 0.5rem;"></i> Enerji tüketim raporlama modülü
+                    </li>
+                    <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                            style="color: var(--secondary); margin-right: 0.5rem;"></i> Kullanıcı bazlı yetkilendirme
+                        sistemi</li>
+                </ul>
+            </div>
+
+            <aside class="project-info-box">
+                <div class="info-item">
+                    <label>Öğrenci</label>
+                    <p>ESRA ÇETİN</p>
+                </div>
+                <div class="info-item">
+                    <label>Proje Dönemi</label>
+                    <p>2024-2025 Güz</p>
+                </div>
+                <div class="info-item">
+                    <label>Kullanılan Teknolojiler</label>
+                    <div class="tech-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">JSON API</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <label>Değerlendirme</label>
+                    <p style="color: var(--accent);"><i class="fas fa-star"></i> Başarılı</p>
+                </div>
+
+                <a href="#" class="demo-btn">Canlı Demoyu Aç <i class="fas fa-external-link-alt"></i></a>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 – Korkuteli Nene Hatun MTAL Bilişim Teknolojileri Alanı</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
